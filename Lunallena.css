@@ -103,6 +103,11 @@ div[class*="_wrapper"][class*="solidHeader"] {
     background-image: none !important;
 }
 
+/* Thumbnail border */
+div[class*="_imageBorder_"] {
+    --border: 0px;
+}
+
 /* Volume slider */
 div[class*="_nativeRangeContainer_"] {
     transform: translateY(-20px) scale(1.2) !important;
@@ -203,11 +208,10 @@ aside[aria-label="Navigation sidebar"] div[class^="_scrollableContent_"] {
 
 /* Playlist */
 [class^="_smallHeader_"] {
-    background-color: transparent !important;
-    backdrop-filter: blur(10px) saturate(2) !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(17px) saturate(2) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     width: 100% !important;
-    max-width: none !important;
     left: 0;
 }
 
