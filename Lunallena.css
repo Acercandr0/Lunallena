@@ -1,0 +1,391 @@
+/* =========================================================
+   LUNALLENA 🌕 by Acercandr0
+   ========================================================= */
+
+/* =========================
+   TITLEBAR
+   ========================= */
+
+/* Margin hack */
+[class*="_bar_"] {
+    margin-bottom: -30px !important;
+    background-color: transparent !important;
+    position: relative;
+    margin-left: var(--sidebarWidth);
+    z-index: 99;
+    top: 3px !important;
+}
+
+/* Window navigation buttons */
+div[class*="_controls_"] {
+    margin-left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    right: calc(var(--sidebarWidth) + 0px) !important;
+}
+
+div[class*="_controls_"] button[class*="_button_"] {
+    transform: scale(0.9) !important;
+    background: transparent !important;
+    transition: color 0.2s ease, transform 0.2s ease !important;
+}
+
+div[class*="_controls_"] button[class*="_button_"] svg {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+div[class*="_controls_"] button[class*="_button_"]:hover svg {
+    fill: rgba(255, 255, 255, 1) !important;
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+/* Padding fixes */
+[class*="_sidebarWrapper"] {
+    padding-top: 0px;
+}
+
+[class*="solidHeader"] {
+    padding-top: 40px !important;
+}
+
+div[class*="_wrapper"][class*="_solidHeader"] {
+   padding-top: 0px !important;
+   margin-top: -15px;
+}
+
+/* App text color */
+[class*="_title_"] span {
+    color: white !important;
+}
+
+/* =========================
+   PLAYER
+   ========================= */
+
+[data-test="footer-player"] {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(15px) saturate(2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    min-width: min-content;
+    box-shadow: none !important;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+[class*="solidHeader"] {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(15px) saturate(2) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.7);
+}
+
+/* Searchbar */
+[data-type="search-field"] {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 30px !important;
+}
+
+/* =========================
+   NOW PLAYING
+   ========================= */
+
+[class*="_nowPlayingContainer_"] {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(70px) saturate(1.2) !important;
+    background-image: none !important;
+}
+[class*="_bottomGradient_"] {
+    background-color: transparent ;
+    background-image: none !important;
+}
+
+/* Volume slider */
+div[class*="_nativeRangeContainer_"] {
+    transform: translateY(-20px) scale(1.2) !important;
+    background-color: rgb(0, 0, 0) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none;
+}
+
+/* Slider tail */
+[class*="_nativeRange_"]::after {
+    display: none !important;
+}
+
+/* Play queue */
+#playQueueSidebar {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(35px) saturate(1.2) !important;
+}
+
+/* Play queue buttons*/
+div[class*="_playQueueWithHeader_"] {
+    bottom: initial !important;
+    gap: 5px !important;
+}
+
+div[class*="_playQueueWithoutHeader_"] {
+    bottom: initial !important;
+    gap: 5px !important;
+    margin-top: -45px !important; 
+}
+
+button[data-test^="playqueue-"],
+button[data-test^="nowplaying-playqueue-"] {
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    overflow: hidden !important;
+    transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease !important;
+    scale: 0.85;
+    margin-top: -15px;
+}
+
+button[data-test^="playqueue-"]:hover,
+button[data-test^="nowplaying-playqueue-"]:hover {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* =========================
+   INVISIBLE SCROLLBARS
+   ========================= */
+
+* {
+    scrollbar-width: none !important;
+}
+
+/* =========================
+   SCROLL FIX
+   ========================= */
+
+/* Container */
+.is-windows.is-desktop {
+    max-height: 100vh !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+}
+
+/* Sidebar  */
+
+aside[aria-label="Navigation sidebar"] {
+    min-height: 100vh !important;
+}
+
+aside[aria-label="Navigation sidebar"] div[class^="_scrollableContent_"] {
+    padding-bottom: calc(var(--miniPlayerHeight) + 10px) !important;
+}
+
+/* Main  */
+
+[class*="main"] {
+    min-height: 100vh !important;
+    padding-bottom: calc(var(--miniPlayerHeight) + 10px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    margin-top: 0px;
+}
+
+/* Main content*/
+
+.mainContent {
+    padding-bottom: var(--miniPlayerHeight);
+    padding-top: calc(var(--headerHeight) + 40px);
+}
+
+/* Settings page */
+[class*="MuiContainer-root"] {
+    padding-top: calc(var(--headerHeight) + 40px);
+    padding-bottom: var(--miniPlayerHeight);
+}
+
+/* Playlist */
+[class^="_smallHeader_"] {
+    background-color: transparent !important;
+    backdrop-filter: blur(10px) saturate(2) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    width: 100% !important;
+    max-width: none !important;
+    left: 0;
+}
+
+/* Playlist name fix */
+[class^="_smallHeader_"] [class*="_coverArt_"] {
+    margin-left: calc(var(--sidebarWidth) + 30px) !important;
+}
+
+div[class^="_smallHeader_"]::before {
+    opacity: 0;
+}
+
+/* =========================
+   MENUS
+   ========================= */
+
+/* Context menu */
+[class*="contextMenu"][role="menu"] {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+[class*="contextMenu"][role="menu"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px) saturate(2) !important;
+    border-radius: inherit;
+    z-index: 0;
+}
+
+[class*="contextMenu"][role="menu"] > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Context sub-menu */
+[class*="_subMenu_"] {
+    position: relative;
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+[class*="_subMenu_"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px) saturate(2) !important;
+    border-radius: inherit;
+    z-index: 0;
+}
+
+[class*="_subMenu_"] > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Library menu */
+[role="menu"][class*="_submenu"] {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px) saturate(2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+[role="menu"][class*="_submenu"] > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Search suggestions */
+div[data-test="query-suggestions"] {
+    background-color: rgb(0, 0, 0) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    height: 75vh;
+}
+
+div[data-test="query-suggestions"] div[class*="_icon_"] {
+    background: transparent !important;
+}
+
+/* Sidebar tooltips */
+[class*="_marketTooltipContainer_"] {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px) saturate(2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white;
+}
+
+/* Tooltips */
+[class*="_tooltipText_"] {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Tooltips tail */
+[class*="_tooltipText_"]::after,
+[class*="_sidebarTooltip_"]::after {
+    display: none !important;
+}
+
+/* Quality bullets */
+[data-test^="streaming-audio-quality"] [class*="_circle_"] {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================
+   HOME PAGE
+   ========================= */
+
+/* Shortcuts */
+[class*="_shortcutItem_"] {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[class*="_shortcutItem_"]:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Cards */
+[class*="_card_"] [class*="_imageContainer_"] {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+/* =========================
+   SEARCH RESULTS
+   ========================= */
+
+[class*="_resultsPageWrapper_"][data-test="search-results"] {
+    padding: 0px !important;
+}
+
+div[data-test="search-results"] div[class*="_solidHeader_"] {
+    --topSpacing: 75px !important;
+    position: fixed !important;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    box-shadow: none !important;
+}
+
+[class*="_resultsContainer_"], [class*="_mobilePageSearch_"] {
+    padding-top: 60px;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+}
+
+[data-test="search-pills"] {
+    margin: auto !important;
+}
+
+div[data-test="search-results"] div[class*="_divider_"] {
+    border: none !important;
+}
+
+div[data-test="search-results"] div[class*="_container_"]::before,
+div[data-test="search-results"] div[class*="_solidHeader_"]::before {
+    display: none !important;
+}
