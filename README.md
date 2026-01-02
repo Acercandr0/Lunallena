@@ -12,7 +12,7 @@ Follow these steps to get Lunallena up and running:
 
 1.  **Install Luna Client Mod:**
     Run the Luna client mod installer. If you don't have it yet, you can download it here:
-    * [**Download Luna Installer**](https://github.com/Tidaluna/Luna/releases)
+    * [**Download Luna Installer**](https://github.com/Inrixia/TidaLuna)
 
 2.  **Open Luna Settings:**
     After installing, open Tidal, click the **three-dot menu** next to your profile icon, and select **Luna settings**.
