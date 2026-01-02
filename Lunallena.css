@@ -13,7 +13,6 @@
     position: relative;
     margin-left: var(--sidebarWidth);
     z-index: 99;
-    top: 3px !important;
 }
 
 /* Window navigation buttons */
@@ -49,7 +48,7 @@ div[class*="_controls_"] button[class*="_button_"]:hover svg {
     padding-top: 40px !important;
 }
 
-div[class*="_wrapper"][class*="_solidHeader"] {
+div[class*="_wrapper"][class*="solidHeader"] {
    padding-top: 0px !important;
    margin-top: -15px;
 }
@@ -165,8 +164,7 @@ button[data-test^="nowplaying-playqueue-"]:hover {
 
 /* Container */
 .is-windows.is-desktop {
-    max-height: 100vh !important;
-    height: 100vh !important;
+    min-height: 100vh !important;
     overflow: hidden !important;
 }
 
@@ -182,7 +180,7 @@ aside[aria-label="Navigation sidebar"] div[class^="_scrollableContent_"] {
 
 /* Main  */
 
-[class*="main"] {
+[class*="main"]:not([class*="image"]) {
     min-height: 100vh !important;
     padding-bottom: calc(var(--miniPlayerHeight) + 10px) !important;
     overflow-y: auto !important;
