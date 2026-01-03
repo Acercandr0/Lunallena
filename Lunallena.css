@@ -12,7 +12,6 @@
     background-color: transparent !important;
     position: relative;
     margin-left: var(--sidebarWidth);
-    z-index: 25;
 }
 
 /* Window navigation buttons */
@@ -39,7 +38,15 @@ div[class*="_controls_"] button[class*="_button_"]:hover svg {
     color: rgba(255, 255, 255, 1) !important;
 }
 
-/* Padding fixes */
+/* =========================
+   PADDING FIXES
+   ========================= */
+
+/* Playqueue position */
+#playQueueSidebar {
+    margin-right: -2px !important;
+}
+
 [class*="_sidebarWrapper"] {
     padding-top: 0px;
 }
@@ -85,7 +92,7 @@ div[class*="_wrapper"][class*="solidHeader"] {
 [data-type="search-field"] {
     background-color: rgba(255, 255, 255, 0.05) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 30px !important;
 }
 
@@ -98,6 +105,7 @@ div[class*="_wrapper"][class*="solidHeader"] {
     backdrop-filter: blur(70px) saturate(1.2) !important;
     background-image: none !important;
 }
+
 [class*="_bottomGradient_"] {
     background-color: transparent ;
     background-image: none !important;
@@ -152,6 +160,19 @@ button[data-test^="nowplaying-playqueue-"] {
 
 button[data-test^="playqueue-"]:hover,
 button[data-test^="nowplaying-playqueue-"]:hover {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Now playing buttons */
+button[data-test="close-now-playing"],
+button[data-test="request-fullscreen"] {
+        background-color: transparent !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+button[data-test="close-now-playing"]:hover,
+button[data-test="request-fullscreen"]:hover {
     background-color: rgba(255, 255, 255, 0.12) !important;
 }
 
@@ -262,7 +283,6 @@ div[class^="_smallHeader_"]::before {
     position: relative;
     z-index: 1;
 }
-
 
 /* Context sub-menu */
 [class*="_subMenu_"] {

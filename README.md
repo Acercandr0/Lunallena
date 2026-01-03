@@ -6,7 +6,6 @@ A theme for **Tidaluna** featuring elegant blur effects and UI tweaks designed t
 ![Preview](previews/2.png)
 ![Preview](previews/3.png)
 ![Preview](previews/4.png)
-![Preview](previews/5.png)
 
 ---
 
