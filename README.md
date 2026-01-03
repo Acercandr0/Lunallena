@@ -2,11 +2,15 @@
 
 A theme for **Tidaluna** featuring elegant blur effects and UI tweaks designed to maximize screen real estate, especially optimized for Sidebar 3.0.
 
-![Lunallena Preview](https://github.com/Acercandr0/Lunallena/blob/main/preview.png?raw=true)
+![Preview](previews/1.png)
+![Preview](previews/2.png)
+![Preview](previews/3.png)
+![Preview](previews/4.png)
+![Preview](previews/5.png)
 
 ---
 
-## 🚀 Installation Guide
+## Installation Guide
 
 Follow these steps to get Lunallena up and running:
 
@@ -25,7 +29,7 @@ Follow these steps to get Lunallena up and running:
 
 ---
 
-## 🛠️ How to Enable Sidebar 3.0
+## How to Enable Sidebar 3.0
 
 Lunallena is specifically tweaked for the new sidebar. To activate it:
 
@@ -34,4 +38,4 @@ Lunallena is specifically tweaked for the new sidebar. To activate it:
 3.  Look for **Sidebar 3.0** and toggle it to **Enabled**.
 
 ---
-*Created with ❤️ by Acercandr0.*
+Created with ❤️ by Acercandr0

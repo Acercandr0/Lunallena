@@ -193,6 +193,16 @@ aside[aria-label="Navigation sidebar"] div[class^="_scrollableContent_"] {
     margin-top: 0px;
 }
 
+[class*="background"] {
+    overflow: visible !important;
+    clip-path: inset(-100% -100% 0% -100%);
+}
+
+[class*="_backgroundBlur_"] {
+    padding: 0px !important;
+    position: relative !important;
+}
+
 /* Main content*/
 
 .mainContent {
