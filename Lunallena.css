@@ -543,25 +543,37 @@ div[data-test="query-suggestions"] div[class*="_icon_"] {
 }
 
 [aria-label="Progress bar"] {
-    position: fixed;
-    top: -75px;
-    width: 98vw;
-    height: 100px;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 25px !important;
+    margin: 0 !important;
+    transform: none !important;
+    background: transparent !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
 }
 
 [class*="_range_"] {
-    background: transparent;
+    background: transparent !important;
     border-radius: 20px;
 }
 
 [data-test="progress-indicator"] {
-    background-color: rgba(255, 255, 255, 0.07);
+    background-color: rgba(255, 255, 255, 0.07) !important;
 }
 
 [data-test="interaction-layer"] {
-    height: 25px;
-    transform: translateY(-115px);
-    pointer-events: auto;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 25px !important;
+
+    transform: none !important;
+    pointer-events: auto !important;
+    z-index: 20 !important;
 }
 
 #progressBar > div > [class*="toolTip"] {
@@ -791,4 +803,51 @@ figure[data-test="now-playing-image"] {
 [class*="_tooltipText_"]::after,
 [class*="_sidebarTooltip_"]::after {
     display: none;
+}
+/* =========================================================
+   FULLSCREEN NOW PLAYING - FIX FOOTER CLIPPING
+   ========================================================= */
+
+/* Allow the footer player to extend outside the fullscreen
+   Now Playing column */
+[class*="_nowPlayingContainer_"],
+[data-test="now-playing"] {
+    overflow: visible !important;
+}
+
+/* Keep the normal footer player dimensions */
+[data-test="footer-player"] {
+    position: fixed !important;
+    left: 50% !important;
+    width: 98vw !important;
+    max-width: none !important;
+    height: 100px !important;
+    bottom: 2vh !important;
+    transform: translateX(-50%) !important;
+}
+
+/* Keep the progress bar exactly aligned with the player */
+[data-test="footer-player"] [aria-label="Progress bar"] {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100px !important;
+    transform: none !important;
+}
+
+/* Only the small strip is interactive */
+[data-test="footer-player"] [data-test="interaction-layer"] {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 25px !important;
+    transform: none !important;
+    pointer-events: auto !important;
+}
+
+/* Preserve the transparent track */
+[data-test="footer-player"] [data-test="progress-indicator"] {
+    background-color: rgba(255, 255, 255, 0.07) !important;
 }
